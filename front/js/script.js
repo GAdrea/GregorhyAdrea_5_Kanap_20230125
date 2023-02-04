@@ -15,17 +15,18 @@ function displayProduct(data) {
     image.setAttribute("alt", product.altTxt);
 
     let title = document.createElement("h3");
-    title.text = "sample text";
+    title.innerHTML = product.name;
+    title.classList.add("productName");
 
     let paragraph = document.createElement("p");
-    paragraph.innertext = "sample text";
+    paragraph.innerHTML = product.description;
+    paragraph.classList.add("productDescription");
     //reste h3 + p a faire
 
-
-    article.appendChild(paragraph);
-    article.appendChild(title);
     article.appendChild(image);
+    article.appendChild(title);
+    article.appendChild(paragraph);
     link.appendChild(article);
-    document.getElementById("items").append(link);
+    document.getElementById("items").appendChild(link);
   }
 }
